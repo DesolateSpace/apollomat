@@ -1,0 +1,112 @@
+a.show_torrents_link,
+table tr td.cats_col > div,
+#collage .torrent_table.grouping.cats td > div.cats_music {
+  background-repeat: no-repeat;
+  background-position: center;
+  display: block;
+}
+
+table tr td.cats_col > div,
+#collage .torrent_table.grouping.cats td > div.cats_music {
+  width: 50px;
+  height: 50px;
+  background-size: 50px 50px;
+  padding: 0 40px;
+}
+
+.show_torrents a.show_torrents_link,
+.hide_torrents a.show_torrents_link {
+  width: 35px;
+  height: 35px;
+  background-size: 35px 35px;
+  padding: 0 30px;
+}
+
+.show_torrents a.show_torrents_link { background-image: svg-load('show.svg', fill: #fff); }
+.hide_torrents a.show_torrents_link { background-image: svg-load('hide.svg', fill: #fff); }
+
+.cats_music { background-image: svg-load('music-albums.svg', fill: #222); }
+.cats_comedy { background-image: svg-load('microphone.svg', fill: #222); }
+.cats_applications { background-image: svg-load('floppy.svg', fill: #222); }
+.cats_ebooks { background-image: svg-load('book.svg', fill: #222); }
+.cats_elearningvideos { background-image: svg-load('video.svg', fill: #222); }
+.cats_audiobooks { background-image: svg-load('audio.svg', fill: #222); }
+.cats_comics { background-image: svg-load('bubble.svg', fill: #222); }
+
+.group .cats_music { background-image: svg-load('music-albums.svg', fill: #fff); }
+.group .cats_comedy { background-image: svg-load('microphone.svg', fill: #fff); }
+.group .cats_applications { background-image: svg-load('floppy.svg', fill: #fff); }
+.group .cats_ebooks { background-image: svg-load('book.svg', fill: #fff); }
+.group .cats_elearningvideos { background-image: svg-load('video.svg', fill: #fff); }
+.group .cats_audiobooks { background-image: svg-load('audio.svg', fill: #fff); }
+.group .cats_comics { background-image: svg-load('bubble.svg', fill: #fff); }
+
+table tr td.read_sticky {
+}
+
+table tr td.unread_sticky {
+}
+
+table tr td.read_locked_sticky {
+}
+
+table tr td.unread_locked_sticky {
+}
+
+/* "Last read" button */
+
+tr.notify_forums td,
+tr.notify_torrents td {
+  & a:not(.brackets) {
+    color: #aaa;
+    padding: 0;
+    background: transparent;
+  }
+  & span.last_read {
+    @apply --small-button-dark;
+    margin-left: 10px;
+    display: block;
+  }
+}
+
+.last_read {
+  @apply --small-button-light;
+
+  height: 20px;
+  width: 24px;
+  display: block;
+  margin-left: 10px;
+
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: 12px 12px;
+
+  & a {
+    display: block;
+    height: 100%;
+    width: 100%;
+  }
+  background-image: svg-load('fast-forward.svg', fill: #666);
+}
+
+tr.notify_forums td .last_read,
+tr.notify_torrents td .last_read,
+.colhead_dark .last_read {
+  @apply --small-button-dark;
+  padding: 0 !important;
+  & a {
+    background-image: svg-load('fast-forward.svg', fill: #ccc);
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: 12px 12px;
+  }
+}
+
+table tr td.unread,
+table tr td.unread_sticky,
+table tr td.read,
+table tr td.read_sticky,
+table tr td.read_locked_sticky,
+table tr td.unread_locked_sticky {
+    padding-left: 15px;
+}

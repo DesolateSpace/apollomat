@@ -1,0 +1,189 @@
+#header  {
+  background: var(--bg-body);
+  display: flex;
+  flex-flow: row wrap;
+  position: relative;
+  height: 220px;
+}
+
+#header, #content, #footer {
+  margin: 0 auto;
+}
+
+#header ul li {
+    list-style: none;
+}
+
+#logo {
+  display: none;
+}
+
+#logo a:active,#logo a:focus {
+    outline: 0;
+}
+
+#userinfo {
+  position: absolute;
+  flex-direction: column;
+  font-size: 14px;
+  top: 0;
+  left: 0;
+  padding: 5px 0 10px;
+  display: flex;
+  width: 100%;
+  flex: 1;
+}
+
+#userinfo > ul {
+  margin-top: 10px;
+  display: flex;
+  & li, & li.brackets {
+    height: 30px;
+    display: flex;
+    & a {
+      align-items: center;
+      padding: 5px 7px;
+      color: #aaa;
+      &:hover, &.active {
+        background: rgba(0,0,0,0.25);
+      }
+    }
+  }
+}
+
+#userinfo_major, #userinfo_minor {
+  flex-flow: row wrap;
+  max-width: 800px;
+}
+
+#userinfo_major li, #userinfo_minor li, #userinfo_username li {
+  border: 0;
+  &.brackets {
+    border-radius: 0;
+    border: 0;
+    padding: 0;
+  }
+  &, &.brackets {
+    background: rgba(0,0,0, 0.2);
+    border-right: 2px solid rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+  }
+  & a {
+    display: block;
+  }
+  &:first-child {
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+    & a { padding-left: 10px; }
+  }
+  &:last-child {
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+    border-right: 0;
+    & a { padding-right: 10px; }
+  }
+}
+
+#userinfo_major {
+  order: 2;
+}
+#userinfo_stats, #userinfo_username {
+  @apply --usermenu;
+  position: absolute;
+  right: 0;
+  display: flex;
+}
+
+#userinfo_username li#nav_userclass { display: none }
+
+#userinfo_stats {
+  color: #d6d4d4;
+  top: calc(10px + 30px + 10px);
+  & li {
+    padding: 5px 7px;
+    border-bottom: 2px solid rgba(0, 0, 0, 0.1);
+    & a {
+      padding: 0 !important;
+    }
+    & span { margin-left: 5px; }
+  }
+}
+
+#menu {
+  z-index: 10;
+  position: absolute;
+  bottom: 36px;
+
+  background: var(--menu-bg);
+
+  @media(--large) { bottom: 31px; }
+  @media(--wide) { bottom: 41px; }
+
+  & ul {
+    display: flex;
+    flex-flow: row wrap;
+    text-align: center;
+    justify-content: center;
+  }
+
+ & li {
+    display: inline-block;
+    &.active {
+      background: color(#3e3e3e lightness(-8%));
+    }
+  }
+
+  & a {
+    color: #fff;
+    display: block;
+    font-size: 18px;
+    font-weight: 200;
+    padding: 15px 15px;
+    &:hover {
+      background: color(#3e3e3e lightness(-3%));
+    }
+  }
+}
+
+#searchbars {
+  background: var(--bg-content);
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  margin: 0 auto;
+  & > ul {
+    display: flex;
+    & li {
+      flex: 1;
+      border-right: var(--searchbars-inputs-border);
+      & input {
+        @apply --searchbars-inputs;
+        border-bottom: var(--searchbars-inputs-border);
+      }
+      &:last-child { border-right: 0; }
+      &:first-child input {
+        padding-left: 20px;
+        border-left: var(--searchbars-inputs-border);
+      }
+      &:last-child input {
+        padding-right: 20px;
+        border-right: var(--searchbars-inputs-border);
+      }
+    }
+  }
+}
+
+#searchbars form ul li {
+  cursor: pointer;
+  display: block;
+  padding: 0 5px;
+}
+
+#searchbars input {
+  padding: 15px 10px;
+  width: 100%;
+  border-radius: 0;
+  border: 0;
+}
+#searchbars input#artistsearch:focus {
+}

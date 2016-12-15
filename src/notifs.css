@@ -1,0 +1,8 @@
+.i-am-new {
+  & li {
+    border: 0 !important;
+    border-radius: 0 !important;
+  }
+  & .noty_message { font-size: 14px !important; }
+  & .noty_buttons { font-size: 14px; }
+}

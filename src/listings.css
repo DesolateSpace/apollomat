@@ -1,0 +1,70 @@
+.torrent_table .colhead_dark img,
+.torrent_table .colhead a img {
+  max-width: 16px;
+  max-height: 16px;
+}
+
+tr.group td {
+  @apply --group-info;
+  vertical-align: middle;
+}
+
+.edition_info {
+  @apply --edition-info;
+  min-height: 30px;
+  padding: 10px;
+  & strong { font-weight: normal; }
+}
+
+.group .big_info .add_bookmark {
+  margin-top: 8px; }
+
+.number_column {
+  text-align: center;
+}
+
+.votespan.brackets {
+  &:before, &:after { display: none }
+  margin-left: 10px;
+}
+
+.torrent_table.details tr.torrent_row td:first-child > span,
+.torrent_table tr.torrent_row td:first-child > span,
+.torrent_table tr.group_torrent td:first-child > span,
+.big_info .group_info > span,
+.torrent_links_block{
+  font-size: 0;
+  & > * {
+    font-size: 16px;
+    @apply --small-button-light;
+    margin-right: 10px;
+  }
+}
+
+.torrentdetails blockquote .time {
+  color: #eee;
+}
+
+.tl_reported {
+  background: color(var(--red) a(70%));
+  font-weight: 200;
+  display: inline-flex;
+  align-items: center;
+  height: 18px;
+  justify-content: center;
+  color: #fff;
+  padding: 2px 4px;
+  border-radius: 5px;
+  font-size: 12px;
+}
+
+.time {
+    font-style: italic;
+    color: var(--time-color);
+}
+.head .time,
+.group .time,
+.colhead .time,
+.colhead_dark .time {
+  color: var(--time-color-alt);
+}

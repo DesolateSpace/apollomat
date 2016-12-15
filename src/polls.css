@@ -1,0 +1,26 @@
+#threadpoll {
+  overflow: hidden;
+  & input[type="button"] {
+    margin: 20px 0 0;
+  }
+}
+
+.poll {
+  margin-top: 20px;
+  & li.graph {
+    margin: 5px 0 10px;
+  }
+}
+.graph {
+  border-radius: 3px;
+  background: rgba(0, 0, 0, 0.2);
+  overflow: hidden;
+  height: 8px;
+}
+
+.graph .center_poll {
+  background: color(var(--action-color) lightness(-4%));
+  //background: color(var(--action-color-3) lightness(-4%));
+  display: block;
+  height: 8px;
+}

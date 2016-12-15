@@ -1,0 +1,56 @@
+.tags {
+  font-size: 0;
+  & a {
+    @apply --tag;
+    & + a { margin-left: 8px; }
+  }
+}
+
+.box_tags .stats > li,
+.box_tags ol > li {
+  font-size: 14px;
+  margin-bottom: 10px;
+  & > a {
+    @apply --tag;
+    height: auto;
+  }
+}
+
+.box_addtag {
+  & br { display: none }
+}
+
+a[href^="torrents.php?taglist"],
+a[onclick^="add_tag"] {
+    @apply --tag;
+    & + & { margin-left: 8px; }
+}
+
+.tooltipster-default {
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  background: #fff;
+  color: #aaa;
+}
+
+.tooltipster-content {
+  background: #eee;
+  color: #666;
+}
+.tooltipster-arrow-border {
+}
+.tooltipster-arrow-top > span:last-child {
+  border-left: 8px solid transparent!important;
+  border-right: 8px solid transparent!important;
+  border-top: 8px solid #eee !important;
+  bottom: -8px;
+}
+
+.tooltipster-content > a[href^="torrents.php?taglist"] {
+  & + a { margin-left: 0; }
+}
+
+#taglist tr:hover { background: none; }
+#taglist tr td { padding: 8px 40px; }
+#taglist tr:first-child td { padding-top: 20px; }
+#taglist tr:last-child td { padding-bottom: 20px; }

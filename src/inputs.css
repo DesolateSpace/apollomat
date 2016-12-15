@@ -1,0 +1,53 @@
+a, input, button, select {
+  transition: all .15s ease-out;
+}
+
+input:not([type="radio"]):not([type="checkbox"]), select {
+  display: inline-block;
+  height: 2.5rem;
+  vertical-align: middle;
+  padding: 0 10px;
+  //padding: 0.625rem;
+  align-items: center;
+}
+
+input:not([type="submit"]),input:not([type="button"]),textarea {
+  @apply --text-field;
+  //box-shadow: inset 0 0 2px #ccc;
+  border-radius: 5px;
+  &:focus {
+    outline: none;
+  }
+}
+
+textarea {
+  padding: 10px;
+}
+
+input[type="submit"], input[type="button"], button, select {
+  @apply --button;
+  cursor: pointer;
+  border-radius: 5px;
+  justify-content: center;
+  &:hover, &:active, &:focus {
+    outline: 0;
+  }
+}
+
+select {
+  appearance: none;
+  background-size: 22px 38px;
+  background-image: inline(var(--select-arrow));
+  background-repeat: no-repeat;
+  background-position: calc(100% - 6px) 0;
+  padding-right: 38px;
+  & optgroup, & option {
+    background: #fff;
+    color: #222;
+  }
+}
+
+.box .submit input[type="submit"],.box .submit input[type="button"] {
+    margin-left: 10px;
+}
+

@@ -1,0 +1,43 @@
+#settings_sections {
+  width: 20%;
+
+  & input[type="submit"] {
+    width: 100%;
+    margin: 0;
+    float: none;
+  }
+
+  & h2 {
+    font-size: 14px;
+    margin: 0;
+    padding: 0;
+    & a {
+      color: #383838;
+      padding: 10px;
+      display: block;
+      &:hover {
+        background: rgba(255,255,255,0.05);
+      }
+    }
+  }
+  & input {
+    margin: 10px 0;
+  }
+}
+
+.user_options {
+    margin-top: 0;
+}
+
+.user_options .label {
+    width: 150px;
+}
+
+.permission_container {
+    margin-left: 20px;
+    width: 303px;
+}
+
+.permission_container:first-child {
+    margin-left: 0;
+}

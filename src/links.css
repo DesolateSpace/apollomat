@@ -1,0 +1,70 @@
+a {
+    text-decoration: none;
+    color: var(--action-color);
+}
+
+a:hover,a:active,a:focus,.highlight {
+    color: color(var(--action-color) lightness(+10%));
+}
+
+/* Actions links */
+
+.linkbox, .linkbox > .center {
+  font-size: 0;
+  margin: 0 0 10px;
+  & > * {
+    font-size: 14px;
+  }
+  & a[name="comments"] { display: none }
+}
+
+.brackets {
+  &::before, &::after { display: none; }
+}
+
+.linkbox > strong,
+.linkbox a,
+.breadcrumbs a,
+a.brackets,
+span.brackets > a {
+  @apply --small-button-light;
+}
+
+.head a,
+tr.colhead td a,
+tr.colhead_dark td a,
+tr.group.discog td .brackets > a,
+tr.group.discog td .add_bookmark > a,
+tr.group .group_info .add_bookmark > a,
+tr.group .group_info .brackets > a {
+  @apply --small-button-dark;
+}
+
+.linkbox > strong, .linkbox a {
+  flex: 1;
+  text-align: center;
+  border-radius: 0;
+  & + a, & + strong {
+    border-left: 0;
+  }
+}
+.linkbox > strong {
+  background: #666;
+  color: #fff;
+}
+.linkbox strong {
+  font-weight: 200;
+}
+.linkbox:empty {
+  display: none;
+}
+
+.linkbox h3 {
+  margin-top: 10px;
+}
+
+span.brackets {
+  & a + a {
+    margin-left: 5px;
+  }
+}

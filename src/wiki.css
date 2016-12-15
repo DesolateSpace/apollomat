@@ -1,0 +1,25 @@
+.wiki_article .pad {
+  padding: 40px !important;
+}
+.wiki_article .postlist {
+  & li {
+    margin: 10px 0;
+  }
+}
+
+span.size1 { font-size: 0.75em; }
+span.size2 { font-size: 1em; }
+span.size3 { font-size: 1.25em; }
+span.size4 { font-size: 1.5em; }
+span.size5 { font-size: 1.75em; }
+span.size6 { font-size: 2em; }
+span.size7 { font-size: 2.25em; }
+span.size8 { font-size: 2.5em; }
+span.size9 { font-size: 2.75em; }
+span.size10 { font-size: 3em; }
+
+/* Rules */
+
+.rule_summary {
+  padding: 20px;
+}

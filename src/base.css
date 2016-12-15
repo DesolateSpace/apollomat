@@ -1,0 +1,146 @@
+@import 'normalize.css';
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  height: 100%;
+  font-size: 12px;
+  @media(--medium-and-less) { font-size: 14px }
+  @media(--wide) { font-size: 16px }
+}
+
+body {
+    background-color: var(--bg-body);
+    font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+    line-height: 1.25em;
+    color: var(--text-color);
+    min-height: 100%;
+}
+
+div,span,object,iframe,h1,h2,h3,h4,h5,h6,p,pre,a,abbr,acronym,address,code,del,dfn,em,img,dl,dt,dd,ol,ul,li,fieldset,form,label,legend,caption,tbody,tfoot,thead,tr {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-weight: inherit;
+    font-family: inherit;
+    vertical-align: baseline;
+}
+
+blockquote,q {
+    margin: 0;
+    padding: 0;
+    border: 1px solid rgba(0, 0, 0, 0.2);
+    border-radius: 5px;
+    font-weight: inherit;
+    font-style: inherit;
+    font-family: inherit;
+    vertical-align: baseline;
+    quotes: "" "";
+    & a { color: #afadad }
+    & a:hover { color: #bbb }
+}
+
+blockquote:before,blockquote:after,q:before,q:after {
+    content: "";
+}
+
+th,td,caption {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-weight: inherit;
+    font-style: inherit;
+    font-family: inherit;
+    vertical-align: baseline;
+    text-align: left;
+    font-weight: normal;
+    vertical-align: middle
+}
+
+table {
+    padding: 0;
+    border: 0;
+    font-weight: inherit;
+    font-style: inherit;
+    font-family: inherit;
+    vertical-align: baseline;
+    border-collapse: separate;
+    border-spacing: 0;
+    vertical-align: middle;
+    margin: 20px 0;
+    width: 100%;
+}
+
+table td {
+  background: var(--row-bg);
+  padding: 20px 10px;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+  vertical-align: top;
+}
+
+table:not(.forum_post) tr:not(.colhead):not(.colhead_dark) {
+  &:hover { background: var(--row-hover); }
+}
+
+a img {
+    border: none;
+}
+
+tbody .body {
+    width: 100%;
+}
+
+.body ol {
+  padding: 20px;
+}
+
+textarea {
+  width: 100%;
+}
+
+blockquote,.save_message {
+    background: color(#424242 a(75%));
+    color: #eee;
+    font-style: italic;
+    margin: 10px 0;
+    padding: 20px;
+}
+
+.hidden { display: none !important; }
+
+.r00,.r01,.r02,.r03,.r04,.r05 {
+    color: #e30;
+}
+
+.r06,.r07,.r08,.r09,.r10 {
+    color: #555;
+}
+
+.r20,.r50,.r99 {
+    color: #1a5;
+}
+
+.center {
+    text-align: center;
+}
+
+.linkbox .center {
+  text-align: left;
+}
+
+.nobullet {
+    list-style: none;
+    margin: 0;
+    padding: 10px;
+}
+
+.nobr {
+    white-space: nowrap;
+}
+
+.save_message {
+    text-align: center;
+}
+

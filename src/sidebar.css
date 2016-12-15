@@ -1,0 +1,66 @@
+#torrents .sidebar {
+  margin-top: 10px;
+}
+
+.sidebar .search_form, .sidebar .add_form, .sidebar #AddArtists {
+  display: flex;
+  flex-flow: row wrap;
+  //& input { max-height: 40px; }
+  & #artistsimilar, & #filelist, & #artist {
+    flex: 1 1 80%;
+    margin-right: 10px;
+  }
+  & input[type="submit"] { flex: 1; }
+}
+
+.sidebar .box_zipdownload {
+  & form {
+      display: flex;
+      flex-flow: row wrap;
+  }
+  & input, & button, & select {
+    margin: 0 0 10px;
+    flex: 1;
+  }
+  & #formats {
+    flex-basis: 85%;
+    margin-right: 10px;
+  }
+  & input[type="submit"] {
+    flex: 1 1 100%;
+  }
+  & #list {
+    flex: 1 1 100%;
+    padding: 0;
+  }
+  & #list li {
+    flex: 1 1 100%;
+    margin: 0 0 10px;
+    display: flex;
+    & .remove, & .brackets { margin-left: auto; }
+  }
+}
+
+ul.stats {
+    padding: 0;
+    & li + li {
+      margin-top: 10px;
+    }
+    & .vote_tag_up { margin-right: 5px }
+    & .vote_tag_down { margin-left: 5px }
+}
+
+.box_addtag {
+  & form {
+    display: flex;
+  }
+  & #tagname { flex: 1 1 80%; }
+  & input[type="submit"] {
+    margin-left: 5px;
+    width: 40px;
+  }
+}
+
+.sidebar li {
+    list-style: none;
+}

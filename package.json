@@ -1,0 +1,29 @@
+{
+  "name": "whatcss",
+  "version": "0.0.0",
+  "description": "a what stylesheet",
+  "dependencies": {
+    "cssnano": "^3.8.1",
+    "gulp": "^3.8.11",
+    "gulp-postcss": "^6.2.0",
+    "gulp-rename": "^1.2.2",
+    "i": "^0.3.5",
+    "lost": "^7.1.1",
+    "normalize.css": "^5.0.0",
+    "postcss-cssnext": "^2.9.0",
+    "postcss-csso": "^1.1.2",
+    "postcss-em-media-query": "^2.0.0",
+    "postcss-import": "^9.0.0",
+    "postcss-inline-svg": "^2.3.0",
+    "postcss-math": "0.0.5",
+    "postcss-mq-optimize": "0.0.0",
+    "postcss-pxtorem": "^3.3.1",
+    "postcss-scss": "^0.4.0",
+    "postcss-write-svg": "^2.1.0",
+    "precss": "^1.4.0"
+  },
+  "author": "salem",
+  "devDependencies": {
+    "postcss-assets": "^4.1.0"
+  }
+}

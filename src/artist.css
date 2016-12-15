@@ -1,0 +1,22 @@
+#discog_table > .center {
+  display: flex;
+  flex-flow: row wrap;
+  border-left: 1px solid rgba(0,0,0,0.2);
+  border-top: 1px solid rgba(0,0,0,0.2);
+  padding-bottom: 0;
+
+  & a {
+    border: 0;
+    border-right: 1px solid rgba(0,0,0,0.2);
+    border-bottom: 1px solid rgba(0,0,0,0.2);
+    border-radius: 0;
+    padding: 10px 20px;
+    flex: 1;
+  }
+}
+
+/* Cloud + Artist Map */
+
+#flip_view_1, #flip_view_2 {
+  width: 100% !important;
+}

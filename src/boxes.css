@@ -1,0 +1,7 @@
+.news_post, .box:not(.rule_summary), .box2 {
+  & > *:not(.head):not(.brackets) {
+    background: rgba(0,0,0,0.1);
+    padding: 20px;
+  }
+  position: relative;
+}

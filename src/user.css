@@ -1,0 +1,50 @@
+.box_userinfo_community .stats li {
+  display: flex;
+  flex-flow: row wrap;
+  align-items: center;
+  border-bottom: 1px solid color(#666 a(10%));
+  padding: 5px 0;
+  font-size: 14px;
+  & + li {
+    margin-top: 5px;
+  }
+  & a, & span[id^="comm"], & span[id^="user"] {
+    height: 20px;
+    margin-left: auto;
+    margin-bottom: 5px;
+    & + a { margin-left: 5px; }
+    & + span { margin-left: 5px; }
+    & span:empty { display: none; }
+  }
+}
+
+table.layout.recent {
+  backface-visibility: hidden;
+  & tbody tr:not(.colhead) td {
+    padding: 5px 0;
+    vertical-align: middle;
+    border-bottom: 0;
+    max-height: 250px;
+    overflow: hidden;
+  }
+  & tr:not(.colhead) td a {
+    display: block;
+    padding: 0 2.5px;
+    position: relative;
+    overflow: hidden;
+    margin: 0 auto;
+    width: 107px;
+    height: 107px;
+
+    @media (--large) {
+      width: 128px;
+      height: 128px;
+    }
+    @media (--wide) {
+      width: 185px;
+      height: 185px;
+    }
+  }
+  & td a img {
+  }
+}

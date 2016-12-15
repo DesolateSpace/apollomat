@@ -1,0 +1,16 @@
+#alerts {
+  text-align: right;
+  padding-right: 3px;
+  display: block;
+}
+
+.alertbar {
+  background: color(var(--orange) a(80%));
+  display: inline-block;
+  color: #fff;
+  border-radius: 5px;
+  margin: 0 auto 20px;
+  padding: 5px 10px;
+  text-align: center;
+}
+

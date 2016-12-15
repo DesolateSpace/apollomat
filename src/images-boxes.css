@@ -1,0 +1,71 @@
+.box_image_avatar img {
+  width: auto;
+}
+
+.box_image_avatar > div[align="center"],
+#covers,
+.box_image > div:not(.head) {
+  padding: 20px 10px !important;
+  background: color(#000 a(80%)) !important;
+  width: 100%;
+  & img {
+    max-width: 100% !important;
+  }
+}
+
+.box_albumart #add_cover_div {
+  padding: 0;
+  height: 48px;
+  display: none;
+  width: 100%;
+  position: absolute;
+  top: 43px;
+  z-index: 999;
+  & .add_form {
+    position: absolute;
+    width: 100%;
+    bottom: 0;
+    height: 36px;
+  }
+  &:after {
+    clear: both;
+  }
+}
+
+.box_albumart:hover #add_cover_div {
+  display: block;
+}
+
+.box_albumart #add_covers_form {
+  display: flex;
+  position: absolute;
+  top: 0;
+  width: 100%;
+  & #add_cover {
+    flex: 1 1 50%;
+    display: flex;
+    & br { display: none; }
+    & input[type="text"] {
+      border-radius: 0;
+      flex: 1 1 33%;
+      border-right: 1px solid rgba(0, 0, 0, 0.6);
+    }
+  }
+  & input[type="submit"] {
+    flex: 1;
+    width: 65px;
+  }
+}
+
+/* Default torrent images, do not resize */
+
+img[src="static/common/noartwork/music.png"],
+img[src="static/common/noartwork/apps.png"],
+img[src="static/common/noartwork/comedy.png"],
+img[src="static/common/noartwork/comics.png"],
+img[src="static/common/noartwork/audiobook.png"],
+img[src="static/common/noartwork/elearning.png"],
+img[src="static/common/noartwork/ebook.png"] {
+  width: 220px !important;
+  height: 220px !important;
+}
