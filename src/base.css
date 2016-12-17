@@ -102,7 +102,7 @@ textarea {
 }
 
 blockquote,.save_message {
-    background: color(#424242 a(75%));
+    @apply --quotes;
     color: #eee;
     font-style: italic;
     margin: 10px 0;
@@ -133,3 +133,6 @@ blockquote,.save_message {
     text-align: center;
 }
 
+.tooltipster-default {
+  margin-top: -4px;
+}

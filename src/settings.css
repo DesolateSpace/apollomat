@@ -25,7 +25,8 @@
 
   --small-button-light: {
     @apply --small-button;
-    background-color: #dadada;
+    background-color: color(#c9c8c8 a(80%));
+    //background-color: #dadada;
     color: #666;
     border: 1px solid rgba(0, 0, 0, 0.3);
 
@@ -80,6 +81,10 @@
 
   --row-bg: rgba(0,0,0,0.1);
   --row-hover: rgba(255,255,255,0.2);
+
+  --quotes: {
+    background: color(#222 a(75%));
+  };
 
   --usermenu: {
     background-color: rgba(0, 0, 0, 0.2);
@@ -164,7 +169,7 @@
     }
   }
 
-  --wrapper-size : {
+  --wrapper-size: {
     max-width: 100vw;
     @media (--medium) { max-width: 850px; }
     @media (--large) { max-width: 1000px; }

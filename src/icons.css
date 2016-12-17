@@ -41,18 +41,6 @@ table tr td.cats_col > div,
 .group .cats_audiobooks { background-image: svg-load('audio.svg', fill: #fff); }
 .group .cats_comics { background-image: svg-load('bubble.svg', fill: #fff); }
 
-table tr td.read_sticky {
-}
-
-table tr td.unread_sticky {
-}
-
-table tr td.read_locked_sticky {
-}
-
-table tr td.unread_locked_sticky {
-}
-
 /* "Last read" button */
 
 tr.notify_forums td,
@@ -69,23 +57,24 @@ tr.notify_torrents td {
   }
 }
 
-.last_read {
+.last_read a {
   @apply --small-button-light;
 
-  height: 20px;
-  width: 24px;
   display: block;
-  margin-left: 10px;
+  margin: 0 10px;
 
   background-repeat: no-repeat;
   background-position: center center;
-  background-size: 12px 12px;
+  background-size: 10px 10px;
+  height: 18px;
+  width: 22px;
 
-  & a {
-    display: block;
-    height: 100%;
-    width: 100%;
+  @medium(--wide) {
+    background-size: 12px 12px;
+    height: 20px;
+    width: 24px;
   }
+
   background-image: svg-load('fast-forward.svg', fill: #666);
 }
 
@@ -102,25 +91,96 @@ tr.notify_torrents td .last_read,
   }
 }
 
+table tr td.read_locked,
+table tr td.read_unlocked,
 table tr td.unread,
 table tr td.unread_sticky,
 table tr td.read,
 table tr td.read_sticky,
 table tr td.read_locked_sticky,
 table tr td.unread_locked_sticky {
-    padding-left: 15px;
+  padding: 0 20px;
+  vertical-align: middle;
+  font-size: 11px;
+  text-align: center;
+  &:before, &:after {
+    border-radius: 5px;
+    border: 1px solid #999;
+    //background-color: #ccc;
+    display: inline-block;
+    height: 24px;
+    width: 24px;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: 12px 12px;
+  }
+  &:after {
+    margin-top: 5px;
+  }
 }
 
-span.add_bookmark a {
+table tr td.read,
+table tr td.read_locked,
+table tr td.read_unlocked,
+table tr td.read_locked_sticky,
+table tr td.read_sticky {
+  &:before, &:after {
+    //background-color: #ccc;
+    opacity: 0.4;
+  }
+}
+
+table tr td.read_sticky,
+table tr td.unread_locked_sticky,
+table tr td.unread_sticky {
+  &:before {
+    content: '';
+    background-image: svg-load('flag.svg', fill: #000);
+  }
+}
+
+table tr td.read_locked,
+table tr td.read_unlocked,
+table tr td.read_locked_sticky,
+table tr td.unread_locked_sticky {
+  &:after {
+    content: '';
+    background-image: svg-load('locked.svg', fill: #000);
+  }
+}
+
+table tr td.read,
+table tr td.unread {
+  &:before {
+    content: '';
+    background-image: svg-load('view.svg', fill: #000);
+  }
+}
+
+span.add_bookmark a,
+span.remove_bookmark a {
   text-indent: -9999px;
   overflow: hidden;
-  background-image: svg-load('bookmark.svg', fill: #333);
   background-repeat: no-repeat;
   background-position: center center;
+}
+span.add_bookmark a,
+span.remove_bookmark a {
   background-size: 12px 12px;
 }
 
+span.add_bookmark a {
+  background-image: svg-load('bookmark.svg', fill: #333);
+}
 
-.group .big_info span.add_bookmark a {
+span.remove_bookmark a{
+  background-image: svg-load('remove-bookmark.svg', fill: #333);
+}
+
+.group span.add_bookmark a {
   background-image: svg-load('bookmark.svg', fill: #ccc);
+}
+
+.group span.remove_bookmark a {
+  background-image: svg-load('remove-bookmark.svg', fill: #ccc);
 }

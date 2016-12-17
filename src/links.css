@@ -36,6 +36,8 @@ tr.colhead_dark td a,
 tr.group.discog td .brackets > a,
 tr.group.discog td .add_bookmark > a,
 tr.group .group_info .add_bookmark > a,
+tr.group.discog td .remove_bookmark > a,
+tr.group .group_info .remove_bookmark > a,
 tr.group .group_info .brackets > a {
   @apply --small-button-dark;
 }
@@ -61,6 +63,9 @@ tr.group .group_info .brackets > a {
 
 .linkbox h3 {
   margin-top: 10px;
+}
+table.forum_post + .linkbox {
+  margin-top: 20px;
 }
 
 span.brackets {

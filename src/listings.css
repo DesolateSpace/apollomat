@@ -16,15 +16,15 @@ tr.group td {
   & strong { font-weight: normal; }
 }
 
-span.add_bookmark {
-  margin-top: 8px;
+span.add_bookmark,
+span.remove_bookmark{
   & a {
     margin-left: 8px;
     margin-right: 0;
   }
 }
 
-.group .big_info {
+.group {
   & a {
     color: var(--action-color-alt);
   }
@@ -47,11 +47,22 @@ span.add_bookmark {
 .torrent_table tr.group_torrent td:first-child > span,
 .big_info .group_info > span,
 .torrent_links_block{
+  float: right;
   font-size: 0;
   & > * {
     font-size: 16px;
     @apply --small-button-light;
     margin-right: 10px;
+  }
+}
+
+.group_info {
+  & .tags {
+    white-space: normal;
+  }
+  & span.add_bookmark,
+  & span.remove_bookmark{
+    float: none;
   }
 }
 

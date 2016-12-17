@@ -1,7 +1,7 @@
 @charset "UTF-8";
 
-@import 'base';
 @import 'settings';
+@import 'base';
 //@import 'settings--dark';
 @import 'breakpoints';
 @import 'layout';
