@@ -23,7 +23,7 @@ table.cat_list td,
     & label {
       font-size: 14px;
       display: inline-block;
-      width: 95px;
+      width: calc(33.33% - 22px);
       margin-bottom: 5px;
     }
   }

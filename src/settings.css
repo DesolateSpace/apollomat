@@ -148,7 +148,7 @@
     border: 1px solid #7e7e7e;
     &:hover {
       background-color: color(#c9c8c8 lightness(-5%));
-      color: #ddd;
+      color: #555;
     }
   }
 
