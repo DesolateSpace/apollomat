@@ -14,14 +14,18 @@ h3 {
   font-size: 20px;
 }
 .head, .colhead_dark, .noty_message {
-  font-weight: 200;
+  @apply --colhead;
+  font-weight: 100;
   padding: 10px;
-  @apply --box-heading-alt;
+}
+
+.head strong + .time {
+  margin-left: 10px;
 }
 
 tr.colhead td {
+  @apply --colhead;
   font-size: 14px;
-  background: var(--colhead-bg);
   color: #eee;
   border-bottom: 1px solid rgba(0,0,0,.2);
   border-left: 1px solid rgba(0,0,0,.2);

@@ -1,5 +1,5 @@
-.torrent_table .colhead_dark img,
-.torrent_table .colhead a img {
+.colhead img,
+.colhead_dark img {
   max-width: 16px;
   max-height: 16px;
 }
@@ -16,8 +16,22 @@ tr.group td {
   & strong { font-weight: normal; }
 }
 
-.group .big_info .add_bookmark {
-  margin-top: 8px; }
+span.add_bookmark {
+  margin-top: 8px;
+  & a {
+    margin-left: 8px;
+    margin-right: 0;
+  }
+}
+
+.group .big_info {
+  & a {
+    color: var(--action-color-alt);
+  }
+  & .tags a {
+    @apply --tag-dark;
+  }
+}
 
 .number_column {
   text-align: center;

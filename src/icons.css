@@ -110,3 +110,17 @@ table tr td.read_locked_sticky,
 table tr td.unread_locked_sticky {
     padding-left: 15px;
 }
+
+span.add_bookmark a {
+  text-indent: -9999px;
+  overflow: hidden;
+  background-image: svg-load('bookmark.svg', fill: #333);
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: 12px 12px;
+}
+
+
+.group .big_info span.add_bookmark a {
+  background-image: svg-load('bookmark.svg', fill: #ccc);
+}

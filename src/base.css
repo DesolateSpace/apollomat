@@ -7,7 +7,8 @@
 html {
   height: 100%;
   font-size: 12px;
-  @media(--medium-and-less) { font-size: 14px }
+  @media(--small-and-less) { font-size: 13px }
+  @media(--large-and-less) { font-size: 14px }
   @media(--wide) { font-size: 16px }
 }
 
@@ -75,7 +76,7 @@ table {
 
 table td {
   background: var(--row-bg);
-  padding: 20px 10px;
+  padding: 1.5rem 10px;
   border-bottom: 1px solid rgba(0, 0, 0, 0.2);
   vertical-align: top;
 }
@@ -109,18 +110,6 @@ blockquote,.save_message {
 }
 
 .hidden { display: none !important; }
-
-.r00,.r01,.r02,.r03,.r04,.r05 {
-    color: #e30;
-}
-
-.r06,.r07,.r08,.r09,.r10 {
-    color: #555;
-}
-
-.r20,.r50,.r99 {
-    color: #1a5;
-}
 
 .center {
     text-align: center;

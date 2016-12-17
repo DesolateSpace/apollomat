@@ -3,6 +3,8 @@
   --bg-content: #d6d4d4;
   --text-color: #222;
   --action-color: #666;
+  --action-color-alt: #b7b7b7;
+
   --green: #81a24e;
   --red: rgb(130, 5, 31);
   --orange: #dc6e32;
@@ -11,26 +13,66 @@
   --autocomplete-bg: rgba(0,0,0,0.90);
   --autocomplete-highlight: #8a8a8a;
 
-  --colhead-bg: #222;
+  --small-button: {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    padding: 2px 8px;
+    font-weight: 300;
+    border-radius: 3px;
+    letter-spacing: 0.01em;
+  }
+
+  --small-button-light: {
+    @apply --small-button;
+    background-color: #dadada;
+    color: #666;
+    border: 1px solid rgba(0, 0, 0, 0.3);
+
+    &:not(strong):hover, &:focus {
+      color: #222;
+      background-color: color(#dadada lightness(+4%));
+      border-color: 1px solid rgba(0,0,0,.2);
+    }
+  }
+
+  --small-button-dark: {
+    @apply --small-button;
+    background-color: #222;
+    color: #eee;
+    &:hover, &:focus {
+      border-color: rgba(0, 0, 0, 0.2);
+      background-color: rgba(0, 0, 0, 0.7);
+      color: rgba(255, 255, 255, 0.9);
+    }
+  }
+
+  --colhead: {
+    color: #eee;
+    background-color: #222;
+    background-image: linear-gradient(to bottom, #111, #222);
+
+    & a {
+      @apply --small-button-dark;
+      font-size: 14px;
+    }
+  }
 
   --h2-color: #636363;
   --h3-color: #383838;
 
   --edition-info: {
     border: 1px solid rgba(0,0,0,.1);
-    background: rgba(0,0,0,0.7);
+    background-color: rgba(0,0,0,0.7);
     color: #dadada;
   }
 
   --group-info: {
-    background: rgba(0,0,0,.81);
+    background-color: #2a2a2a;
+    background-image: linear-gradient(to bottom, #333, #2a2a2a);
     border-top: 1px solid rgba(0,0,0,.1);
     border-right: 1px solid rgba(0,0,0,.1);
     color: #c2c2c2;
-    & a {
-      color: #eee;
-      &:hover { color: color(#eee lightness(-9%)); }
-    }
   }
 
   --time-color: #282828;
@@ -40,13 +82,13 @@
   --row-hover: rgba(255,255,255,0.2);
 
   --usermenu: {
-    background: rgba(0, 0, 0, 0.2);
+    background-color: rgba(0, 0, 0, 0.2);
     border: 1px solid rgba(0, 0, 0, 0.1);
     min-height: 30px;
   }
 
   --box-heading-alt: {
-    background: #3e3e3e;
+    background-color: #3e3e3e;
     color: #eee;
     font-size: 18px;
     border: 1px solid rgba(0, 0, 0, 0.1);
@@ -55,7 +97,7 @@
   }
 
   --text-field: {
-    background: #fff;
+    background-color: #fff;
     border: 1px solid rgba(0,0,0,.2);
     color: #666;
     &:focus {
@@ -64,13 +106,15 @@
     }
   }
 
-  --menu-bg: #181818;
+  --menu: {
+    background: #111;
+  }
 
   --searchbars-inputs-border: 1px solid #ccc; 
   --searchbars-inputs: {
       border-bottom:1px solid #ccc;
-      background: #eee;
-      &:focus { background: #fff }
+      background-color: #eee;
+      &:focus { background-color: #fff }
     }
 
   --button: {
@@ -85,55 +129,37 @@
 
   --select-arrow: 'select-arrow.png';
 
-  --small-button: {
-    display: inline-flex;
-    justify-content: center;
-    align-items: center;
-    padding: 2px 8px;
-    font-weight: 300;
-    border-radius: 3px;
-    letter-spacing: 0.01em;
-  }
-
-  --small-button-light: {
-    @apply --small-button;
-    background: #dadada;
-    color: #666;
-    border: 1px solid rgba(0, 0, 0, 0.3);
-
-    &:not(strong):hover, &:focus {
-      //border-color: rgba(0, 0, 0, 0.2);
-      //background: rgba(0, 0, 0, 0.7);
-      color: #222;
-      background-color: color(#dadada lightness(+4%));
-      border-color: 1px solid rgba(0,0,0,.2);
-    }
-  }
-
-  --small-button-dark: {
-    @apply --small-button;
-    background: rgba(0, 0, 0, 0.2);
-    color: #eee;
-    &:hover, &:focus {
-      border-color: rgba(0, 0, 0, 0.2);
-      background: rgba(0, 0, 0, 0.7);
-      color: rgba(255, 255, 255, 0.9);
-    }
-  }
 
   --tag: {
-    background: color(#ccc a(7%));
     font-size: 12px;
-    color: #353535;
     padding: 2px 5px;
     border-radius: 5px;
-    border: 1px solid color(#333 a(50%));
     display: inline-flex;
     height: 1.05rem;
     align-items: center;
     margin-top: 4px;
+  }
+
+  --tag-light: {
+    @apply --tag;
+    background-color: color(#c9c8c8 a(80%));
+    font-size: 12px;
+    color: #353535;
+    border: 1px solid #7e7e7e;
     &:hover {
-      background: color(#353535 lightness(+5%));
+      background-color: color(#c9c8c8 lightness(-5%));
+      color: #ddd;
+    }
+  }
+
+  --tag-dark: {
+    @apply --tag;
+    background-color: color(#ccc a(7%));
+    font-size: 12px;
+    color: #b7b7b7;
+    border: 1px solid color(#333 a(50%));
+    &:hover {
+      background-color: color(#353535 lightness(+5%));
       color: #ddd;
     }
   }

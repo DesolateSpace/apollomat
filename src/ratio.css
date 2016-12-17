@@ -1,0 +1,11 @@
+.r00,.r01,.r02,.r03 {
+  color: var(--red);
+}
+
+.r04,.r05,.r06,.r07,.r08,.r09 {
+  color: var(--orange);
+}
+
+.r10,.r20,.r50,.r99 {
+  color: var(--green);
+}

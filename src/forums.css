@@ -6,7 +6,7 @@
 }
 
 .last_poster {
-  @media (--medium-and-less) { float: left !important; }
+  @media (--large-and-less) { float: left !important; }
 }
 
 .forum_post {

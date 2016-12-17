@@ -114,9 +114,9 @@
   position: absolute;
   bottom: 36px;
 
-  background: var(--menu-bg);
+  @apply --menu;
 
-  @media(--large) { bottom: 31px; }
+  @media(--large) { bottom: 35px; }
   @media(--wide) { bottom: 41px; }
 
   & ul {
@@ -145,45 +145,3 @@
   }
 }
 
-#searchbars {
-  background: var(--bg-content);
-  position: absolute;
-  bottom: 0;
-  width: 100%;
-  margin: 0 auto;
-  & > ul {
-    display: flex;
-    & li {
-      flex: 1;
-      border-right: var(--searchbars-inputs-border);
-      & input {
-        @apply --searchbars-inputs;
-        border-bottom: var(--searchbars-inputs-border);
-      }
-      &:last-child { border-right: 0; }
-      &:first-child input {
-        padding-left: 20px;
-        border-left: var(--searchbars-inputs-border);
-      }
-      &:last-child input {
-        padding-right: 20px;
-        border-right: var(--searchbars-inputs-border);
-      }
-    }
-  }
-}
-
-#searchbars form ul li {
-  cursor: pointer;
-  display: block;
-  padding: 0 5px;
-}
-
-#searchbars input {
-  padding: 15px 10px;
-  width: 100%;
-  border-radius: 0;
-  border: 0;
-}
-#searchbars input#artistsearch:focus {
-}
