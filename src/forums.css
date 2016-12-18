@@ -37,7 +37,7 @@
   & > * { font-size: 16px; margin-left: 10px; }
 }
 
-tr.colhead_dark td a[href^="user"] {
+.forum_post tr.colhead_dark td a[href^="user"] {
   border: 0;
   background: none;
   color: #fff;

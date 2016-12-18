@@ -5,7 +5,7 @@ h2, h3 {
 
 h2 {
   font-size: 24px;
-  padding: 10px 0;
+  padding: 0 0 10px;
   color: var(--h2-color);
 }
 

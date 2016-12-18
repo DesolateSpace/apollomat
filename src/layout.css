@@ -1,6 +1,6 @@
 #wrapper {
   @apply --wrapper-size;
-  margin: 20px auto;
+  margin: 0 auto;
   &:after {
     content: '';
     display: block;

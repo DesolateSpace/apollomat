@@ -3,6 +3,7 @@
 @custom-media --very-small (width > 450px) and (width <= 600px);
 @custom-media --small-and-less (width <= 600px);
 @custom-media --small (width > 450px) and (width <= 600px);
+@custom-media --medium-and-less (width <= 980px);
 @custom-media --medium (width > 600px) and (width <= 980px);
 @custom-media --large (width > 980px) and (width <= 1400px);
 @custom-media --large-and-less (width <= 1400px);
