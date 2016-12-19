@@ -73,9 +73,11 @@ table.layout.recent {
     position: relative;
     overflow: hidden;
     margin: 0 auto;
-    width: 107px;
-    height: 107px;
 
+    @media (--small-and-less) {
+      width: 13vw;
+      height: 13vw;
+    }
     @media (--large) {
       width: 128px;
       height: 128px;

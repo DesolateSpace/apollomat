@@ -1,6 +1,6 @@
 #userinfo {
   transition: right .15s ease-out;
-  transition-delay: .2s;
+  transition-delay: var(--usermenu-delay);
   display: flex;
   flex-direction: column;
   position: fixed;
@@ -8,28 +8,51 @@
   right: -18vw;
   width: 18vw;
   height: 100vh;
-  background: #222;
+  background: #111;
   box-shadow: -5px 10px 50px color(#111 a(50%));
   border-left: 1px solid #444;
   z-index: 99998;
 
-  &:before {
+  @media (width <= 670px) {
+    width: 220px;
+    right: -220px;
+  }
+
+  &:before, &:after {
     content: "";
     display: block;
     cursor: pointer;
-    transition: left .2s ease-in-out, opacity .2s ease-out;
-    transition-delay: .5s;
     position: absolute;
     z-index: 99999;
     width: 40px;
     left: -40px;
-    height: 100vh;
-    box-shadow: -5px 10px 50px color(#111 a(60%));
-    background-color: #222;
+  }
+
+  &:before {
+    transition: left .2s ease-in-out, opacity .2s ease-out;
+    transition-delay: .8s;
+    //top: calc(50% - 20px);
+    top: 40px;
+    @media(--small-and-less) {
+      top: 90px;
+    }
+    height: 40px;
+    box-shadow: -5px 10px 30px color(#000 a(30%));
+    border: 1px solid #333;
+    background-color: #111;
     background-image: svg-load('settings.svg', fill: #888);
     background-repeat: no-repeat;
     background-size: 50%;
-    background-position: center 45px;
+    background-position: center center;
+  }
+
+  &:after {
+    height: 100vh;
+    top: 0;
+    cursor: w-resize;
+    @media(width <= 890px) {
+      display: none;
+    }
   }
 
   &:hover {
@@ -50,7 +73,7 @@
 
 #userinfo_username {
   display: flex;
-  border-bottom: 1px solid #aaa;
+  border-bottom: 1px solid #333;
   flex: 0 0 48px;
   & li {
     flex: 1;
@@ -69,7 +92,7 @@
       text-indent: -9999px;
       background-repeat: no-repeat;
       background-position: center center;
-      background-size: 50% 50%;
+      background-size: 45% 45%;
     }
   }
 }

@@ -3,7 +3,8 @@
   display: flex;
   flex-flow: column wrap;
   margin: 40px auto 20px;
-  @media(--medium-and-less) {
+  @media(--small-and-less) {
+    margin: 0;
   }
   @media(--large) {
     height: 83px;

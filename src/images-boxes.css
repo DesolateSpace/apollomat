@@ -58,14 +58,15 @@
 }
 
 /* Default torrent images, do not resize */
-
-img[src="static/common/noartwork/music.png"],
-img[src="static/common/noartwork/apps.png"],
-img[src="static/common/noartwork/comedy.png"],
-img[src="static/common/noartwork/comics.png"],
-img[src="static/common/noartwork/audiobook.png"],
-img[src="static/common/noartwork/elearning.png"],
-img[src="static/common/noartwork/ebook.png"] {
-  width: 220px !important;
-  height: 220px !important;
+.box_albumart  {
+  & img[src="static/common/noartwork/music.png"],
+  & img[src="static/common/noartwork/apps.png"],
+  & img[src="static/common/noartwork/comedy.png"],
+  & img[src="static/common/noartwork/comics.png"],
+  & img[src="static/common/noartwork/audiobook.png"],
+  & img[src="static/common/noartwork/elearning.png"],
+  & img[src="static/common/noartwork/ebook.png"] {
+    width: 220px !important;
+    height: 220px !important;
+  }
 }
