@@ -1,8 +1,9 @@
 {
-  "name": "whatcss",
+  "name": "Mat",
   "version": "0.0.0",
-  "description": "a what stylesheet",
+  "description": "A minimal stylesheet for Gazelle",
   "dependencies": {
+    "cartesian-product": "^2.1.2",
     "cssnano": "^3.8.1",
     "gulp": "^3.8.11",
     "gulp-postcss": "^6.2.0",

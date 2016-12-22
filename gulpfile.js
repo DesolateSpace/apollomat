@@ -14,6 +14,23 @@ var writeSvg   = require("postcss-write-svg");
 var cssnano    = require("cssnano");
 var csso       = require("postcss-csso");
 var assets     = require('postcss-assets');
+var product    = require('cartesian-product');
+var path       = require('path');
+var fs         = require('fs');
+
+var variantsFolder = 'src/variants';
+
+function getFilesFromFolder(folder) {
+  return fs.readdirSync(folder);
+}
+
+function getVariants() {
+  var variantsType = getFilesFromFolder(variantsFolder);
+  return product(variantsType.map(function(variantType) {
+    var files =  getFilesFromFolder(path.join(variantsFolder, variantType));
+    return files.map(function(file) { return path.join(variantsFolder, variantType, file)} );
+  }));
+}
 
 var postCSSProcessors = [
     atImport({from: './src/index.css'}),
